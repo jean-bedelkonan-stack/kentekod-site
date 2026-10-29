@@ -1,0 +1,42 @@
+<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="KenteKod">
+  <defs>
+    <linearGradient id="kkGrad" gradientUnits="userSpaceOnUse" x1="8" y1="8" x2="112" y2="112">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#4338ca"/>
+    </linearGradient>
+  </defs>
+
+  <!-- anneau circuit (segments irréguliers, esprit "trace PCB") -->
+  <circle cx="60" cy="60" r="50" fill="none" stroke="url(#kkGrad)" stroke-width="4.5"
+    stroke-linecap="round" stroke-dasharray="70 16 52 16 88 16" transform="rotate(-100 60 60)"/>
+
+  <!-- anneau intérieur, plus fin -->
+  <circle cx="60" cy="60" r="40" fill="none" stroke="url(#kkGrad)" stroke-width="2" opacity="0.5"/>
+
+  <!-- pattes de circuit (aux points de rupture de l'anneau) -->
+  <line x1="91.1" y1="28.9" x2="99.6" y2="20.4" stroke="url(#kkGrad)" stroke-width="4.5" stroke-linecap="round"/>
+  <line x1="28.9" y1="91.1" x2="20.4" y2="99.6" stroke="url(#kkGrad)" stroke-width="4.5" stroke-linecap="round"/>
+
+  <!-- noeuds -->
+  <circle cx="85" cy="16.7" r="4.2" fill="#4338ca"/>
+  <circle cx="103.3" cy="35" r="3.4" fill="#3b82f6"/>
+  <circle cx="110" cy="60" r="3.4" fill="#22d3ee"/>
+  <circle cx="35" cy="103.3" r="4.2" fill="#3b82f6"/>
+  <circle cx="16.7" cy="85" r="3.4" fill="#4338ca"/>
+  <circle cx="10" cy="60" r="3.4" fill="#22d3ee"/>
+
+  <!-- accent gestion de projet : mini-barres de type Gantt -->
+  <rect x="77" y="93" width="10" height="3" rx="1.5" fill="#22d3ee"/>
+  <rect x="83" y="98.5" width="16.5" height="3" rx="1.5" fill="#3b82f6"/>
+  <rect x="79" y="104" width="12" height="3" rx="1.5" fill="#4338ca"/>
+
+  <!-- monogramme KK -->
+  <g fill="none" stroke="url(#kkGrad)" stroke-width="5.2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M42 39 L42 81"/>
+    <path d="M42 60 L58.5 39"/>
+    <path d="M42 60 L58.5 81"/>
+    <path d="M58.5 39 L58.5 81" opacity="0.92"/>
+    <path d="M58.5 60 L77 39" opacity="0.92"/>
+    <path d="M58.5 60 L77 81" opacity="0.92"/>
+  </g>
+</svg>
