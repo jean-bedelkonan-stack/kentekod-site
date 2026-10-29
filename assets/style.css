@@ -97,11 +97,32 @@ p { margin: 0; }
   letter-spacing: 0.02em;
 }
 .main-nav a.lang-switch:hover { border-color: var(--white); }
-/* Écrans moyens (901–1100 px) : le menu avec le sélecteur de langue est serré */
-@media (min-width: 901px) and (max-width: 1100px) {
+/* Écrans moyens (1001–1100 px) : le menu avec le sélecteur de langue est serré */
+@media (min-width: 1001px) and (max-width: 1100px) {
   .main-nav { gap: 14px; }
   .main-nav a { font-size: 0.86rem; }
   .main-nav a.lang-switch { padding: 3px 9px; font-size: 0.78rem; }
+}
+/* Jusqu'à 1000 px : menu replié (hamburger) — avec le sélecteur de langue, les
+   libellés français ne tiennent plus sur une ligne en dessous de cette largeur. */
+@media (max-width: 1000px) {
+  .main-nav {
+    display: none;
+    position: absolute;
+    top: 64px; left: 0; right: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    background: var(--ink-900);
+    padding: 16px 24px 24px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .main-nav.is-open { display: flex; }
+  .main-nav a { padding: 10px 0; width: 100%; }
+  .main-nav a.lang-switch { width: auto; padding: 4px 14px; margin-top: 6px; }
+  .nav-toggle { display: inline-flex; }
+  .site-header .container { height: 64px; position: relative; gap: 12px; justify-content: space-between; }
+  .site-header > .container > .btn-primary { display: none; }
 }
 .nav-toggle {
   display: none;
