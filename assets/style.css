@@ -97,6 +97,12 @@ p { margin: 0; }
   letter-spacing: 0.02em;
 }
 .main-nav a.lang-switch:hover { border-color: var(--white); }
+/* Écrans moyens (901–1100 px) : le menu avec le sélecteur de langue est serré */
+@media (min-width: 901px) and (max-width: 1100px) {
+  .main-nav { gap: 14px; }
+  .main-nav a { font-size: 0.86rem; }
+  .main-nav a.lang-switch { padding: 3px 9px; font-size: 0.78rem; }
+}
 .nav-toggle {
   display: none;
   background: none; border: none; color: var(--white); cursor: pointer;
