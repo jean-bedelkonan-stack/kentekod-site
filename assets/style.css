@@ -88,6 +88,15 @@ p { margin: 0; }
   transition: color .15s ease;
 }
 .main-nav a:hover, .main-nav a.active { color: var(--white); }
+/* Sélecteur de langue FR / EN */
+.main-nav a.lang-switch {
+  border: 1px solid rgba(255,255,255,0.35);
+  border-radius: 999px;
+  padding: 4px 12px;
+  font-size: 0.82rem;
+  letter-spacing: 0.02em;
+}
+.main-nav a.lang-switch:hover { border-color: var(--white); }
 .nav-toggle {
   display: none;
   background: none; border: none; color: var(--white); cursor: pointer;

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — KENTEKOD</title>
+<meta name="description" content="Request a personalized KENTEKOD demo or ask us your questions — we reply quickly.">
+<link rel="icon" type="image/svg+xml" href="../assets/logo-mark.svg">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="alternate" hreflang="fr-CA" href="https://www.kentekod.com/contact.html">
+<link rel="alternate" hreflang="en" href="https://www.kentekod.com/en/contact.html">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand"><img src="../assets/logo-mark.svg" alt="KenteKod" class="brand-mark"> KENTEKOD</a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="fonctionnalites.html">Features</a>
+      <a href="gestion-projet.html">Project Management</a>
+      <a href="cybersecurite.html">Cybersecurity</a>
+      <a href="entreprise.html">Company</a>
+      <a href="contact.html" class="active">Contact</a>
+      <a href="../contact.html" class="lang-switch" lang="fr" hreflang="fr-CA">Français</a>
+    </nav>
+    <a href="contact.html" class="btn btn-primary">Request a demo</a>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+</header>
+
+<main>
+  <section class="hero" style="padding-bottom: 64px;">
+    <div class="container">
+      <div class="hero-inner">
+        <span class="eyebrow">Contact</span>
+        <h1>Let's talk about your projects</h1>
+        <p class="lead">Request a personalized demo or ask us your questions — we reply quickly.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="grid-2" data-reveal style="align-items: start;">
+
+        <div class="contact-card">
+          <h3 style="margin-bottom: 18px;">Contact details</h3>
+          <div class="feature-row" style="border-top: none; padding-top: 0;">
+            <div class="num">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z" opacity="0"/><path d="M22 6l-10 7L2 6"/><path d="M2 6h20v12H2z"/></svg>
+            </div>
+            <div>
+              <h3 style="font-size:0.95rem;">Email</h3>
+              <p style="margin-bottom: 6px;"><a href="mailto:info@kentekod.com" style="color: var(--blue-600);">info@kentekod.com</a></p>
+              <button type="button" id="copy-email-btn" data-email="info@kentekod.com" style="font-size:0.78rem; color: var(--slate-500); text-decoration: underline; background:none; border:none; padding:0; cursor:pointer; font-family: inherit;">Copy address</button>
+            </div>
+          </div>
+          <div class="feature-row">
+            <div class="num">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <h3 style="font-size:0.95rem;">Location</h3>
+              <p>Québec, Canada</p>
+            </div>
+          </div>
+          <div class="feature-row">
+            <div class="num">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div>
+              <h3 style="font-size:0.95rem;">Response time</h3>
+              <p>Usually within 1 business day</p>
+            </div>
+          </div>
+        </div>
+
+        <form id="contact-form" class="contact-card" action="https://formsubmit.co/info@kentekod.com" method="POST">
+          <input type="hidden" name="_subject" value="KENTEKOD demo request (English site)">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <h3 style="margin-bottom: 18px;">Request a demo</h3>
+          <div style="position:absolute; left:-9999px; top:auto;" aria-hidden="true">
+            <label for="website">Do not fill in</label>
+            <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+          </div>
+          <div class="form-grid">
+            <div class="form-field">
+              <label for="nom">Full name</label>
+              <input type="text" id="nom" name="nom" required>
+            </div>
+            <div class="form-field">
+              <label for="organisation">Organization</label>
+              <input type="text" id="organisation" name="organisation">
+            </div>
+            <div class="form-field full">
+              <label for="courriel">Business email</label>
+              <input type="email" id="courriel" name="email" required>
+            </div>
+            <div class="form-field full">
+              <label for="message">Your needs</label>
+              <textarea id="message" name="message" rows="5" placeholder="Briefly describe your context and what you are looking to achieve…"></textarea>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg" style="width:100%;">Send request</button>
+        </form>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand"><img src="../assets/logo-mark.svg" alt="KenteKod" class="brand-mark"> KENTEKOD</a>
+        <p>Portfolio, project and program management platform, built for demanding organizations and designed for Canadian hosting.</p>
+        <a href="contact.html" class="btn btn-primary">Request a demo</a>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="fonctionnalites.html">Features</a></li>
+          <li><a href="gestion-projet.html">Project Management</a></li>
+          <li><a href="cybersecurite.html">Cybersecurity</a></li>
+          <li><a href="entreprise.html">Company</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:info@kentekod.com">info@kentekod.com</a></li>
+          <li>Québec, Canada</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="politique-confidentialite.html">Privacy policy</a></li>
+          <li><a href="conditions-utilisation.html">Terms of use</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 KENTEKOD. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/script.js"></script>
+</body>
+</html>

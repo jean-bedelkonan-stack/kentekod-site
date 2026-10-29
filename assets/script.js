@@ -8,6 +8,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Langue de la page (<html lang="en"> pour la version anglaise, dossier /en/).
+  const isEn = (document.documentElement.lang || '').toLowerCase().startsWith('en');
+
   const contactForm = document.querySelector('#contact-form');
   // Version hors Azure (GitHub Pages) : pas de serveur à nous. Le formulaire est
   // transmis au service gratuit FormSubmit qui envoie un courriel à
@@ -38,10 +41,14 @@ document.addEventListener('DOMContentLoaded', () => {
           if (!res.ok || String(result.success) === 'false') throw new Error('request_failed');
         }
         contactForm.reset();
-        statusEl.textContent = 'Merci ! Votre demande a bien été envoyée, nous vous répondrons rapidement.';
+        statusEl.textContent = isEn
+          ? 'Thank you! Your request has been sent — we will get back to you shortly.'
+          : 'Merci ! Votre demande a bien été envoyée, nous vous répondrons rapidement.';
         statusEl.classList.add('is-success');
       } catch (err) {
-        statusEl.textContent = "Une erreur est survenue lors de l'envoi. Vous pouvez aussi nous écrire directement à info@kentekod.com.";
+        statusEl.textContent = isEn
+          ? 'Something went wrong while sending. You can also write to us directly at info@kentekod.com.'
+          : "Une erreur est survenue lors de l'envoi. Vous pouvez aussi nous écrire directement à info@kentekod.com.";
         statusEl.classList.add('is-error');
       } finally {
         if (submitBtn) submitBtn.disabled = false;
@@ -67,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.execCommand('copy');
         document.body.removeChild(helper);
       }
-      copyEmailBtn.textContent = 'Adresse copiée !';
+      copyEmailBtn.textContent = isEn ? 'Address copied!' : 'Adresse copiée !';
       setTimeout(() => { copyEmailBtn.textContent = originalLabel; }, 2000);
     });
   }
